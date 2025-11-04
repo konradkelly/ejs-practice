@@ -7,7 +7,18 @@ app.use(express.static("public"));
 
 app.get("/", (req, res) => {
 	const person = { name: "Donald Duck", oc: "plumber", fc: "red" };
-	res.render("home", { person });
+	const friends = ["Mickey", "Goofy", "Minnie", "Daisy"];
+	res.render("home", { person, friends });
+});
+
+app.get("/friends", (req, res) => {
+	const friends = ["Mickey", "Goofy", "Minnie", "Daisy"];
+	res.render("friends", { friends });
+});
+
+app.get("/movies", (req, res) => {
+	const movies = ["Star Wars", "Lord of The Rings", "Lion King", "Avatar"];
+	res.render("movies", { movies });
 });
 
 app.listen(PORT, () =>

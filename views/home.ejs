@@ -8,5 +8,12 @@
 	<body>
 		<h1>EJS Practice</h1>
 		<h2>Hello, <%= person.name %></h2>
+        <h3>Occupation: <% person.oc %></h3>
+
+        <% if (person.fc === 'red') { %>
+        <p>Favorite Color: <% person.fc %>. You are cool!</p>
+        <% } else { %>
+        <p>Favorite Color: <% person.fc %>. You are not cool!</p>
+        <% } %>
 	</body>
 </html>

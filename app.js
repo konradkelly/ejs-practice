@@ -6,7 +6,7 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-	const person = { name: "Donald Duck", occupation: "plumber" };
+	const person = { name: "Donald Duck", oc: "plumber", fc: "red" };
 	res.render("home", { person });
 });
 

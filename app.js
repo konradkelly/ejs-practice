@@ -1,13 +1,15 @@
-import express from 'express';
+import express from "express";
 const app = express();
 const PORT = 3020;
 
-app.set('view engine', 'ejs');
-app.use(express.static('public'));
+app.set("view engine", "ejs");
+app.use(express.static("public"));
 
-app.get('/', (req, res) => {
-    res.render('home');
+app.get("/", (req, res) => {
+	const person = { name: "Donald Duck", occupation: "plumber" };
+	res.render("home", { person });
 });
 
-app.listen(PORT, () => console.log(`Server is running on https://localhost:${PORT}`));
-
+app.listen(PORT, () =>
+	console.log(`Server is running on http://localhost:${PORT}`)
+);

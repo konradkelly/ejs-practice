@@ -7,12 +7,13 @@
 	</head>
 	<body>
 		<h1>EJS Practice</h1>
-
+        <%- include('partials/header') %>
 		<h1>Your movies</h1>
 		<ul>
 			<% movies.forEach(movies=> { %>
 			<li><%= movies %></li>
 			<% }) %>
 		</ul>
+		<%- include('partials/footer') %>
 	</body>
 </html>
